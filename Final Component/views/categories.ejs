@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- header-->
+<% include partials/header.ejs %>
+
+<body>
+<div class="capsule">
+
+	  <% if( test == 1){%>
+			<!--Header2 -->
+		<% include partials/header2_LoggedIn.ejs %>
+		<!--site navigation-->
+	  <% include partials/site-navigation_LoggedIn.ejs %>
+		<%}else{%>
+			<% include partials/header2.ejs %>
+ 		<!--site navigation-->
+ 		<% include partials/site-navigation.ejs %>
+ <%}%>
+
+<div class="row fullHeight">
+	<!-- user navigation-->
+	<% include partials/user-navigation.ejs %>
+    <div class="column right fullHeight background2">
+	<div class="breadCrumbs">
+		<a href="/home">Home</a> > Categories
+	</div>
+
+	<% if(user) { %>
+	<% var a=0; %>
+	<% for (var i=0; i < category.length; i++) { %>
+			<% if(category[i].categoryName== user) { %>
+	<h3><%= category[i].categoryName %></h3>
+	<% a++; %>
+	<% } %>
+<% } %>
+
+<% if(a === 0) { %>
+	<h2>No Items available for the given category</h2>
+<% } %>
+<% for(var j=0; j < result.length; j++) { %>
+	<% if(user == result[j].catalogCategory) { %>
+	<a href='<%= "/item?itemCode="+result[j].itemcode %>'>  <%= result[j].itemname %> </a><br/>
+	<% } %>
+	<% } %>
+<% } else{ %>
+<% for(var i=0; i < category.length; i++) { %>
+	<h3><%= category[i].categoryName %></h3>
+	<% for(var j=0;j< result.length;j++) { %>
+		<% if(category[i].categoryName == result[j].catalogCategory) { %>
+			<a href='<%= "/item?itemCode="+result[j].itemcode %>'>  <%= result[j].itemname %>  </a><br/>
+			<% } %>
+
+			<% } %>
+
+	<% } %>
+<% } %>
+
+  </div>
+</div>
+
+
+<!-- footer-->
+<% include partials/footer.ejs %>
+
+</div>
+</body>
+</html>

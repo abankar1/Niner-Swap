@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- header-->
+<% include partials/header.ejs %>
+
+<body>
+
+<div class="capsule">
+			<!--Header2 -->
+			<% include partials/header2.ejs %>
+		<!--site navigation-->
+		<% include partials/site-navigation.ejs %>
+
+<div class="row fullHeight">
+  <!-- user navigation-->
+	<% include partials/user-navigation.ejs %>
+    <div class="column right fullHeight background2">
+	<div class="breadCrumbs">
+	Home > About
+	</div>
+  <main>
+
+    <br>
+    <br>
+    <div class="writing">
+      <p>The user whom you are trying to register, already exists.</p><br>
+      <p>Please try with other userId and emailid.</p><br>
+      <p>Already registered ? <a href='/signin'>Sign In</a></p><br>
+      <p>New user <a href=/register><u>Register</u></a></p>
+
+
+    </div>
+  </main>
+
+
+  </div>
+</div>
+
+<!-- footer-->
+<% include partials/footer.ejs %>
+</div>
+</body>
+</html>

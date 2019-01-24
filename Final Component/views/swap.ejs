@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- header-->
+<% include partials/header.ejs %>
+
+<body>
+
+<div class="capsule">
+			<!--Header2 -->
+		<% include partials/header2_LoggedIn.ejs %>
+		<!--site navigation-->
+		<% include partials/site-navigation_LoggedIn.ejs %>
+
+
+<div class="row fullHeight">
+	<!-- user navigation-->
+	<% include partials/user-navigation.ejs %>
+    <div class="column right fullHeight background2">
+	<div>
+    <h2>
+      Swap this item
+    </h2>
+	</div><br><br>
+
+	<main>
+		<form action="/feedback" method="POST">
+		<h2 class="writing">Select a item from your available swap</h2><br>
+	<% if(ans.length >0) { %>
+		<% for(var i=0;i< ans.length; i++ ) { %>
+			<table>
+				<th><input type="radio" name="book" value="<%= ans[i].itemname %>" onchange="document.getElementById('Confirm').disabled = !this.checked;"><%= ans[i].itemname %></th>
+			</table>
+			<br>
+
+			<% } %>
+			<button type="submit" class="button" name="Confirm" disabled id="Confirm">Confirm Swapping</button>
+		<% } else { %>
+			<h2 class="writing"> NO items available for swap</h2>
+			<% } %>
+
+ </form>
+	</main>
+
+
+
+</div>
+
+  </div>
+</div>
+
+<!-- footer-->
+<% include partials/footer.ejs %>
+</div>
+</body>
+</html>

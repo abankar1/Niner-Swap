@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+<script src="../resources/javascript/myItems.js"></script>
+-->
+<!-- header-->
+<% include partials/header.ejs %>
+<body>
+
+<div class="capsule">
+	  	<!--Header2 -->
+		<% include partials/header2_LoggedIn.ejs %>
+		<!--site navigation-->
+		<% include partials/site-navigation_LoggedIn.ejs %>
+
+
+<div class="row fullHeight">
+	<!-- user navigation-->
+	<% include partials/user-navigation.ejs %>
+
+	<div class="column right fullHeight background2">
+	<div class="breadCrumbs">
+		<a href="/home">Home</a> > My Skateboards
+	</div>
+
+
+	<div class="something">
+		<p><b>Niner Skateboards Available</b></p>
+	</div>
+	<form action="/myItems" method="POST">
+		 <% if(result.length >0) { %>
+			<table class="myItemsBrief">
+							<tr>
+									<th>Book</th>
+									<th>Category</th>
+									<th>Rating</th>
+									<th>Swapped</th>
+									<th>Update/Delete</th>
+							</tr>
+
+							<% for(var i=0;i< result.length;i++) { %>
+								 <tr>
+										 <td><%= result[i].item %></td>
+										 <td><%= result[i].itemcategory %>
+										 <td><%= result[i].rating %></td>
+										 <td><%= result[i].status %></td>
+										 <td>
+											 <button type="submit" name="update" value='<%= result[i].item %>'> Update</button>
+											 <%if(result[i].status!="swapped"){%>
+														 <button type="submit" name="delete" value='<%= result[i].item %>'> Delete</button>
+														 <%}%>
+										 </td>
+
+
+								 </tr>
+							<% } %>
+
+
+
+		</table>
+		<% } else { %>
+			<h2>there are no items</h2>
+			<% } %>
+</form>
+</table>
+</div>
+</div>
+<!--
+	<div style="width: 100%;position: absolute;bottom: 0;">
+   <h4> &#x21bb;  swap offer available.  &#x2714; already swapped </h4>
+  </div>
+  -->
+	<!-- footer-->
+	<% include partials/footer.ejs %>
+</div>
+
+</body>
+</html>

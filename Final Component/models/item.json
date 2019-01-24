@@ -1,0 +1,72 @@
+{
+    "items": [
+	   {
+        "itemcode" : "SKB_A001",
+        "itemname" : "Classic Red",
+        "catalogCategory" : "The Pseudo-Surfboard",
+        "Description" : "It is one of our most noseridable board. Good for riders over 110lbs.",
+        "rating" : "7",
+        "imageurl" : "../resources/images/classic_red.jpg"
+    },
+    {
+        "itemcode" : "SKB_A002",
+        "itemname" : "Classic Bamboo Natural",
+        "catalogCategory" : "The Pseudo-Surfboard",
+        "Description" :  "Perfect for classic surf-style riding and landpaddling.",
+        "rating" : "10",
+        "imageurl" : "../resources/images/classic_bamboo_natural.jpg"
+    },
+    {
+        "itemcode" : "SKB_A003",
+        "itemname" : "Class Bamboo Doho",
+        "catalogCategory" : "The Pseudo-Surfboard",
+        "Description" : "Good for riders of all sizes and weights",
+        "rating" : "9",
+        "imageurl" : "../resources/images/classic_bamboo_doho.jpg"
+    },
+    {
+        "itemcode" : "SKB_A004",
+        "itemname" : "Classic Bamboo Sano",
+        "catalogCategory" : "The Pseudo-Surfboard",
+        "Description" : "Caters to those who wish to control and manipulate every section of the wave into a carving turn and nose ride",
+        "rating" : "6",
+        "imageurl" : "../resources/images/classic_bamboo_sano.jpg"
+    },
+    {
+        "itemcode" : "SKB_B001",
+        "itemname" : "D Street Graphic Polyprop Ink",
+        "catalogCategory" : "The Polyprop",
+        "Description" : "It is one of our most noseridable board. Good for riders over 110lbs.",
+        "rating" : "7",
+        "imageurl" : "../resources/images/polyprop_ink.jpg"
+    },
+    {
+        "itemcode" : "SKB_B002",
+        "itemname" : "D Street Neon Flash Polyprop Orange",
+        "catalogCategory" : "The Polyprop",
+        "Description" : "Perfect for classic surf-style riding and landpaddling.",
+        "rating" : "8",
+        "imageurl" : "../resources/images/polyprop_orange.jpg"
+    },
+    {
+        "itemcode" : "SKB_B003",
+        "itemname" : "D Street Graphic Polyprop Sunset",
+        "catalogCategory" : "The Polyprop",
+        "Description" : "Good for riders of all sizes and weights",
+        "rating" : "9",
+        "imageurl" : "../resources/images/polyprop_sunset.jpg"
+    },
+    {
+        "itemcode" : "SKB_B004",
+        "itemname" : "D Street 3rd Gen Polyprop Cruiser Black/Red",
+        "catalogCategory" : "The Polyprop",
+        "Description" : "Caters to those who wish to control and manipulate every section of the wave into a carving turn and nose ride",
+        "rating" : "5",
+        "imageurl" : "../resources/images/polyprop_black_red.jpg"
+    }
+	],
+  "categories":[
+    {"categoryCode":"C1","categoryName":"The Pseudo-Surfboard"},
+    {"categoryCode":"C2","categoryName":"The Polyprop"}
+  ]
+}

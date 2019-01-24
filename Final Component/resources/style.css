@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.capsule {
+	height:100%;
+}
+
+.notSignedIn {
+	position:absolute;
+	top:5%;
+	right:1%;
+}
+
+.button {
+	padding: 1%;
+	width:50%;
+	height:50%;
+}
+
+.checked{
+	color:red;
+}
+/* Style the header */
+.header {
+	height:15%;
+    background-color: #F5F5D9;
+    padding: 10px;
+    position:relative;
+	text-align: left;
+    border: 1px solid black;
+
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+	text-align:center;
+	height: 5%;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.row{
+	height: 70%;
+}
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    height:600px;
+    bottom: 100px;
+
+}
+
+
+/* Left column */
+.left{
+    width: 25%;
+    height: 100%;
+}
+
+/* right column */
+.right {
+    width: 75%;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* Style the footer */
+.footer {
+    background-color: #F5F5D9;
+    position: fixed;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.fullHeight{
+    height: 100%;
+}
+.background1{
+background-color:#333;
+}
+.background2{
+background-color: #F0FAFA;
+}
+
+.breadCrumbs{
+	font-size: 15px;
+	color: black;
+}
+
+.qw{
+	list-style-type:none;
+	padding:10px;
+	line-height:45px;
+}
+.qw a{
+	text-decoration:none;
+	font-size:20px;
+	color:white;
+}
+.qwe{
+	list-style-type:none;
+	padding:18px;
+	line-height:32px;
+}
+.navigation{
+	bottom:5%;
+	right:1%;
+	position:absolute;
+}
+.myItemsBrief{
+	float: center;
+    width: 75%;;
+	height:10%;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 2px solid black;
+    position: relative;
+	text-align:center;
+}
+
+.something{
+	padding:10px;
+	margin-left:50px;
+	margin-right:50px;
+	text-align:left;
+	font-size:30px;
+}

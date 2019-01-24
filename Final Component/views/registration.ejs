@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- header-->
+<% include partials/header.ejs %>
+
+<body>
+
+<div class="capsule">
+			<!--Header2 -->
+			<% include partials/header2.ejs %>
+		<!--site navigation-->
+		<% include partials/site-navigation.ejs %>
+
+<div class="row fullHeight">
+  <!-- user navigation-->
+	<% include partials/user-navigation.ejs %>
+    <div class="column right fullHeight background2">
+	<div class="breadCrumbs">
+	Home > About
+	</div>
+  <main>
+  <h2 class="writing">Register</h2>
+  <br>
+  <form action="/register" method='post'>
+    <label class="writing">User Id:</label><br>
+    <input type="text" name="userid" required />
+    <br>
+    <label class="writing">First name:</label><br>
+    <input type="text" name="firstname" required />
+    <br>
+    <label class="writing">Last name:</label><br>
+    <input type="text" name="lastname" required />
+    <br>
+
+    <label class="writing">E-mail Id:</label><br>
+    <input type="text" name="emailid" required />
+    <br>
+
+    <label class="writing">Password:</label><br>
+    <input type="password" name="password" required />
+    <br><br>
+
+
+
+    <input type="submit" class="writing" value="Register">
+  </form>
+
+
+  </main>
+
+  </div>
+</div>
+
+<!-- footer-->
+<% include partials/footer.ejs %>
+</div>
+</body>
+</html>

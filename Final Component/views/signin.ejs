@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- header-->
+<% include partials/header.ejs %>
+
+<body>
+
+<div class="capsule">
+
+			<% include partials/header2.ejs %>
+		<!--site navigation-->
+		<% include partials/site-navigation.ejs %>
+
+
+<div class="row fullHeight">
+  <!-- user navigation-->
+	<% include partials/user-navigation.ejs %>
+    <div class="column right fullHeight background2">
+	<div class="breadCrumbs">
+	Sign In
+	</div>
+
+
+	<% if(message==='1') { %>
+	    <main>
+
+	      <h4>Please Login</h4>
+	      <br>
+
+	      <form action="/signin" method='POST'>
+
+	<label for="email">E-mail ID:</label><br>
+	<input type="text" id="email" name="emailid" required/>
+	<br>
+	<label for="password">Password:</label><br>
+	<input type="password" id="password" name="password" required>
+	<br><br>
+	<input type="submit"  value="Sign in">
+	</form>
+	<br>
+	<h4>Don't have an account? <a href="/register"><u>Register</u></a></h4>
+
+	    </main>
+	    <% } else { %>
+	      <main>
+
+	        <h2 class="writing">Incorrect Email ID or Password</h2>
+	        <br>
+
+	        <form action="/signin" method='post'>
+	  <label for="email">E-mail ID:</label><br>
+	  <input type="text" id="emailid" name="emailid" required/>
+	  <br>
+	  <label for="password2">Password:</label><br>
+	  <input type="password" id="password2" name="password" required>
+	  <br><br>
+	  <input type="submit" value="Sign In">
+	  </form>
+	  <br>
+	  <h4>Don't have an account? <a href="/register" name="regsiter">Register</a></h4>
+
+	      </main>
+	      <% } %>
+
+</div>
+</div>
+
+<!-- footer-->
+<% include partials/footer.ejs %>
+</div>
+</body>
+</html>

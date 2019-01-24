@@ -1,0 +1,17 @@
+{
+  "user":[
+  {"userId":"usid1","firstName":"Akshay","lastName":"Bankar","emailAddress":"akshay@gmail.com","address1Field":"221C","address2Field":"Barton Creek Drive","city":"Charlotte","state":"North Carolina","zipCode":"28262","country":"USA"},
+{"userId":"usid2","firstName":"ABC","lastName":"XYZ","emailAddress":"abcxyz@gmail.com","address1Field":"3784","address2Field":"Diploma Drive","city":"Charlotte","state":"North Carolina","zipCode":"26862","country":"USA"},
+{"userId":"usid3","firstName":"PQR","lastName":"STU","emailAddress":"prqstu@gmail.com","address1Field":"9309","address2Field":"Kittanset Drive","city":"Charlotte","state":"North Carolina","zipCode":"26862","country":"USA"}
+],
+"userProfile":[
+{"userId":"usid1","userItem":["Classic Red","The Pseudo-Surfboard"]},
+{"userId":"usid2","userItem":["Classic Bamboo Natural","The Pseudo-Surfboard"]}
+],
+"useritems":[
+    {"userId":"usid1","item":"Classic Red","itemcategory":"The Pseudo-Surfboard", "rating":"9", "status": "pending", "swapitem":"Classic Bamboo Natural", "swapitemrating":"", "swapperrating":""},
+    {"userId":"usid2","item":"Classic Bamboo Natural", "itemcategory":"The Pseudo-Surfboard","rating":"5", "status": "available", "swapitem":"Classic Red", "swapitemrating":"", "swapperrating":""},
+	{"userId":"usid2","item":"D Street Graphic Polyprop Ink", "itemcategory":"The Polyprop","rating":"7", "status": "available", "swapitem":"", "swapitemrating":"", "swapperrating":""},
+	{"userId":"usid1","item":"D Street Neon Flash Polyprop Orange", "itemcategory":"The Polyprop","rating":"9", "status": "available", "swapitem":"", "swapitemrating":"", "swapperrating":""}
+  ]
+}

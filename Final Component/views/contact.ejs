@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- header-->
+<% include partials/header.ejs %>
+
+<body>
+
+<div class="capsule">
+	  <% if( test == 1){%>
+			<!--Header2 -->
+		<% include partials/header2_LoggedIn.ejs %>
+		<!--site navigation-->
+		<% include partials/site-navigation_LoggedIn.ejs %>
+		<%}else{%>
+			<% include partials/header2.ejs %>
+		<!--site navigation-->
+		<% include partials/site-navigation.ejs %>
+	<%}%>
+
+<div class="row fullHeight">
+  <!-- user navigation-->
+	<% include partials/user-navigation.ejs %>
+    <div class="column right fullHeight background2">
+	<div class="breadCrumbs">
+	Home > Contact
+	</div>
+  <h2> You can drop a mail to the administrator. He will reach you as soon as possible. You can mail to akshaybankar@gmail.com</h2>
+  </div>
+</div>
+
+<!-- footer-->
+<% include partials/footer.ejs %>
+</div>
+</body>
+</html>

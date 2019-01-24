@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- header-->
+<% include partials/header.ejs %>
+<body>
+
+<div class="capsule">
+	  	<!--Header2 -->
+		<% include partials/header2_LoggedIn.ejs %>
+		<!--site navigation-->
+		<% include partials/site-navigation_LoggedIn.ejs %>
+
+
+<div class="row fullHeight">
+	<!-- user navigation-->
+	<% include partials/user-navigation.ejs %>
+
+	<div class="column right fullHeight background2">
+	<div class="breadCrumbs">
+		<a href="/home">Home</a> > My Swaps
+	</div>
+
+  <div class="something">
+		<p><b>Niner Swap Offers</b></p>
+	</div>
+	<% if(usercurrentitem !=='1') { %>
+		<form action="/myItems" method="POST">
+	<table>
+	<tr>
+	<th>My Skateboards</th>
+	<th>Swap offer</th>
+	<th>Action</th>
+	</tr>
+
+	<tr>
+		<td><%= usercurrentitem[0].item %></td>
+		<td><%= usercurrentitem[0].swapitem %></td>
+		<td><button type="submit" name="Accept" value='<%= usercurrentitem[0].item %>'>Accept</button>
+													<button type="submit" name="Reject" value='<%= usercurrentitem[0].item %>'>Reject</button>
+													<button type="submit" name="Withdraw" value='<%= usercurrentitem[0].item %>'>Withdraw</button>
+												</td>
+	</tr>
+
+
+	</table>
+</form>
+	<% } else { %>
+	  <h2 class="writing"> Please go to MySkateboards page and select any of your items </h2>
+	  <% } %>
+</div>
+</div>
+<!--
+	<div style="width: 100%;position: absolute;bottom: 0;">
+   <h4> &#x21bb;  swap offer available.  &#x2714; already swapped </h4>
+  </div>
+  -->
+	<!-- footer-->
+	<% include partials/footer.ejs %>
+</div>
+
+</body>
+</html>
